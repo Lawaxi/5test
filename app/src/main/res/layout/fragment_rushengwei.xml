@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui._2lauguoyin._2Fragment">
+    tools:context=".ui._3rushengwei._3Rushengwei">
 
     <EditText
-        android:id="@+id/shit2"
+        android:id="@+id/shit3"
         style="@android:style/Widget.DeviceDefault.EditText"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -22,52 +22,57 @@
         android:inputType="textMultiLine"
         android:scrollbarStyle="outsideInset"
         android:singleLine="false"
-        android:text="老國音的禪，實際祗有趙元任一個人ㄦ會參！"
-        app:layout_constraintBottom_toTopOf="@+id/pinyin"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/clear2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/pinyin"
+        android:id="@+id/yinbiao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="21dp"
-        android:layout_marginRight="21dp"
-        android:text="趙拼"
-        app:layout_constraintBaseline_toBaselineOf="@+id/zhuyin"
-        app:layout_constraintEnd_toEndOf="@+id/textView" />
+        android:layout_marginBottom="200dp"
+        android:text="音標"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/shit3" />
 
     <Button
-        android:id="@+id/zhuyin"
+        android:id="@+id/yinbiao3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
-        android:layout_marginBottom="24dp"
-        android:text="注音"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toStartOf="@+id/pinyin" />
+        android:text="祗取韻尾"
+        app:layout_constraintStart_toStartOf="@+id/yinbiao"
+        app:layout_constraintTop_toBottomOf="@+id/yinbiao" />
+
+    <Button
+        android:id="@+id/yunmu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:text="韻目"
+        app:layout_constraintBaseline_toBaselineOf="@+id/yinbiao"
+        app:layout_constraintEnd_toStartOf="@+id/yinbiao" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="27dp"
-        android:layout_marginLeft="27dp"
-        android:layout_marginBottom="141dp"
-        android:text="輸出文本中藍色為未知字，紅色為與普通話差異較大的字."
+        android:id="@+id/textView3"
+        android:layout_width="318dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginBottom="70dp"
+        android:text="取《廣韻》中古音，部分韻目包含多個韻母 (多少介音的問題)，以國際音標輸出時會用括號標出."
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/yinbiao3" />
 
     <Button
-        android:id="@+id/clear"
+        android:id="@+id/clear2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="27dp"
-        android:layout_marginRight="27dp"
         android:text="淸空"
-        app:layout_constraintBaseline_toBaselineOf="@+id/zhuyin"
-        app:layout_constraintEnd_toStartOf="@+id/zhuyin" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/yunmu"
+        app:layout_constraintStart_toStartOf="@+id/shit3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

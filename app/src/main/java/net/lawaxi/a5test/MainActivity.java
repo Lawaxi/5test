@@ -12,6 +12,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import net.lawaxi.a5test.ui._1ziantuanyin._1Fragment;
 import net.lawaxi.a5test.ui._2lauguoyin._2Fragment;
+import net.lawaxi.a5test.ui._3rushengwei._3Rushengwei;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         _1Fragment.initData();
         _2Fragment.initData();
+        _3Rushengwei.initData();
     }
 
 }

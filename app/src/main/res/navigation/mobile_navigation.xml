@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="net.lawaxi.a5test.ui._3unkown.NotificationsFragment"
+        android:name="net.lawaxi.a5test.ui._3rushengwei._3Rushengwei"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_unkown" />
+        tools:layout="@layout/fragment_rushengwei" />
 </navigation>

@@ -35,12 +35,11 @@ public class _2Fragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_lauguoyin, container, false);
         text = (EditText) root.findViewById(R.id.shit2);
-        replace = (Switch) root.findViewById(R.id.replace);
 
         s = new Runnable() {
             @Override
             public void run() {
-                text.setText(dealString(text.getText().toString(),zhuyin,replace.isChecked()));
+                text.setText(dealString(text.getText().toString(),zhuyin));
             }
         };
 
@@ -74,8 +73,9 @@ public class _2Fragment extends Fragment {
     }
 
 
-    public static final SpannableString dealString(String pre, boolean zhuyin, boolean replace_with_n){
-        String a = ZHConverter.convert(pre, ZHConverter.TRADITIONAL);
+    public static final SpannableString dealString(String pre, boolean zhuyin){
+        String a = ZHConverter.convert(pre, ZHConverter.TRADITIONAL)
+                .replace("它","牠");
         String b = "";
         List<int[]> red = new ArrayList<>();
         List<int[]> blue = new ArrayList<>();
@@ -114,7 +114,7 @@ public class _2Fragment extends Fragment {
                             .replace("5","⁵");
 
                     if(zhuyin) //转注音
-                        pinyin = toZhuyin(pinyin, replace_with_n);
+                        pinyin = toZhuyin(pinyin);
 
                     String out = t+"("+pinyin+")";
                     int d1 = before.lastIndexOf("<b>"); //是否和今音不同
@@ -145,12 +145,12 @@ public class _2Fragment extends Fragment {
         return c;
     }
 
-    public static final String toZhuyin(String dealedString, boolean replace_with_n){
+    public static final String toZhuyin(String dealedString){
         String a = dealedString;
         for(String[] convert : data_zhuyin){
             a = a.replace(convert[0],convert[1]);
         }
-        return replace_with_n ? a.replace('ㄬ','ㄋ') : a;
+        return a;
     }
 
     private static final String FONT_REPLACEMENT = "<font color='%1$s'>%2$s</font>";
@@ -188,9 +188,9 @@ public class _2Fragment extends Fragment {
         data_zhuyin.add(new String[]{"sh","ㄕ"});
         data_zhuyin.add(new String[]{"zh","ㄓ"});
         data_zhuyin.add(new String[]{"r","ㄖ"});
-        data_zhuyin.add(new String[]{"o","ㄛ"});
         data_zhuyin.add(new String[]{"eo","ㄜ"});
         data_zhuyin.add(new String[]{"e","ㄝ"});
+        data_zhuyin.add(new String[]{"o","ㄛ"});
         data_zhuyin.add(new String[]{"u","ㄨ"});
         data_zhuyin.add(new String[]{"a","ㄚ"});
         data_zhuyin.add(new String[]{"zi","ㄗ"});
@@ -206,7 +206,8 @@ public class _2Fragment extends Fragment {
         data_zhuyin.add(new String[]{"v","ㄪ"});
         data_zhuyin.add(new String[]{"d","ㄉ"});
         data_zhuyin.add(new String[]{"t","ㄊ"});
-        data_zhuyin.add(new String[]{"n","ㄬ"});
+        data_zhuyin.add(new String[]{"nj","ㄬ"});
+        data_zhuyin.add(new String[]{"n","ㄋ"});
         data_zhuyin.add(new String[]{"l","ㄌ"});
         data_zhuyin.add(new String[]{"g","ㄍ"});
         data_zhuyin.add(new String[]{"k","ㄎ"});
