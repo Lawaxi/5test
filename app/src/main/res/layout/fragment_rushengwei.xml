@@ -22,7 +22,7 @@
         android:inputType="textMultiLine"
         android:scrollbarStyle="outsideInset"
         android:singleLine="false"
-        android:text=""
+        android:text="郭沫若没出息，不积极阅读学习热力学学术力作，读硕却不续读博。浙北谷穴贼作，郭踯躅不决，击敌不力，罚禄失职，实属屈辱。食龌龊的垃圾食物却不食六畜熟肉及绿色麦谷，喝血及蜜却不喝白色的雪碧。不服佛法，日日月月极作孽，掠获鹿鸭鹤雀，直接握铁戟杀戮，切赤舌，凿白骨，拔黑发，斫肉末，确实毒辣刻薄，触及法律。宅植苜蓿不植菊，客室角落没竹没木亦没石。特别渴，悒郁寂寞得哭，纳秃发妾入屋，热不沐浴，熄灭蜡烛，急摸席侧的雪白玉足。食色蚀力，弱不敌疾，却一直觉得不值得吃药。一夕，忽卒。"
         app:layout_constraintBottom_toTopOf="@+id/clear2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

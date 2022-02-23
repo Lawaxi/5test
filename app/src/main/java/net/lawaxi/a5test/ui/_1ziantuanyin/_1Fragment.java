@@ -99,7 +99,8 @@ public class _1Fragment extends Fragment {
     };
 
     public static List ZTYhandle(String pre) {
-        String a = ZHConverter.convert(pre, ZHConverter.TRADITIONAL)
+        String a = ZHConverter.convert(pre
+                .replace("叶","葉"), ZHConverter.TRADITIONAL)
                 .replace("覷", "覰")
                 .replace("璿", "璇")
                 .replace("濬", "浚")

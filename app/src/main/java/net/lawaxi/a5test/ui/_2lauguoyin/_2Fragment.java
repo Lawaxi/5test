@@ -74,7 +74,8 @@ public class _2Fragment extends Fragment {
 
 
     public static final SpannableString dealString(String pre, boolean zhuyin){
-        String a = ZHConverter.convert(pre, ZHConverter.TRADITIONAL)
+        String a = ZHConverter.convert(pre
+                .replace("叶","葉"), ZHConverter.TRADITIONAL)
                 .replace("它","牠");
         String b = "";
         List<int[]> red = new ArrayList<>();
